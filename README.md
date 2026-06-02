@@ -1,56 +1,112 @@
-# Desafio DIO - Simulação de Agentes de IA para Orientação Profissional e Plano de Estudos
+# Desafio DIO - Simulação de Sistema Multiagentes para Orientação de Carreira
 
 ## 📖 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte de um desafio da DIO com o objetivo de explorar o uso de Inteligência Artificial através da simulação da colaboração entre dois Agentes de IA.
+Este projeto foi desenvolvido como parte de um desafio da DIO com o objetivo de explorar conceitos de Inteligência Artificial Generativa, Engenharia de Prompt e Sistemas Multiagentes.
 
-A proposta consistiu em utilizar prompts estruturados para representar o trabalho de dois agentes especializados que atuam em sequência para auxiliar no planejamento de carreira e estudos.
+A proposta consistiu em simular a colaboração entre dois Agentes de IA especializados, onde cada agente possui uma responsabilidade específica dentro do processo de orientação profissional.
+
+O fluxo utiliza o conceito de **handoff**, permitindo que um agente colete e analise informações do usuário e transfira esse contexto para outro agente responsável por gerar um plano completo de desenvolvimento profissional.
 
 ---
 
 ## 🎯 Objetivo
 
-Demonstrar como múltiplos agentes de IA podem trabalhar em conjunto para analisar informações, tomar decisões e gerar soluções personalizadas para um usuário.
+Demonstrar como múltiplos agentes de IA podem trabalhar em conjunto para:
+
+- Coletar informações do usuário.
+- Analisar perfis profissionais.
+- Recomendar carreiras compatíveis.
+- Compartilhar contexto entre agentes.
+- Criar planos de estudos personalizados.
+- Simular aplicações reais de sistemas multiagentes.
 
 ---
 
-## 🤖 Agente 1 - Análise de Perfil Profissional
+## 🤖 Agente 1 - Entrevistador de Carreira
 
-O primeiro agente foi responsável por analisar minhas habilidades, interesses e características pessoais.
+O primeiro agente foi responsável por realizar uma entrevista estruturada para compreender o perfil profissional do usuário.
 
 ### Funções
 
-- Avaliar competências técnicas e comportamentais.
-- Identificar pontos fortes.
-- Relacionar habilidades com áreas profissionais.
-- Gerar uma lista com as 3 profissões mais compatíveis com o perfil analisado.
+- Identificar interesses e motivações.
+- Avaliar experiência prévia.
+- Entender disponibilidade de estudo.
+- Mapear preferências de trabalho.
+- Compreender objetivos profissionais.
+- Relacionar habilidades com áreas de tecnologia.
+- Realizar uma análise de compatibilidade entre perfil e carreiras.
+
+### Processo
+
+O agente conduziu uma entrevista composta por 7 perguntas realizadas individualmente.
+
+Após coletar todas as respostas, realizou uma análise interna baseada em:
+
+- Afinidade com interesses.
+- Demanda de mercado.
+- Tempo de preparação para entrada na área.
+- Aproveitamento de experiências anteriores.
 
 ### Resultado
 
-O agente apresentou três possíveis carreiras alinhadas às minhas habilidades e interesses, permitindo uma análise mais direcionada para a próxima etapa.
+Ao final da análise, o agente gerou:
+
+- Ranking das 3 carreiras mais compatíveis.
+- Explicação personalizada para cada sugestão.
+- Vantagens e desafios de cada carreira.
+- Contexto geral de mercado.
+
+O usuário então escolheu uma das carreiras sugeridas para prosseguir para a próxima etapa.
 
 ---
 
-## 🤖 Agente 2 - Planejamento de Estudos
+## 🤖 Agente 2 - Planejador de Carreira
 
-O segundo agente recebeu como entrada:
+Após a escolha da carreira, o segundo agente recebeu todas as informações coletadas pelo Agente 1.
 
-- A profissão escolhida entre as sugeridas pelo Agente 1.
-- Meu nível atual de conhecimento.
-- Minha meta profissional.
+### Informações Recebidas
 
-Com base nessas informações, o agente elaborou um plano de estudos personalizado para os próximos 90 dias.
+- Carreira escolhida.
+- Disponibilidade semanal de estudo.
+- Nível de experiência.
+- Objetivo profissional.
+- Preferência de atuação.
+- Interesses tecnológicos.
 
 ### Funções
 
-- Identificar conhecimentos necessários para a carreira escolhida.
-- Organizar conteúdos por ordem de aprendizado.
-- Estruturar uma trilha de desenvolvimento.
-- Definir metas e prioridades para o período.
+- Explicar o dia a dia da profissão escolhida.
+- Mapear habilidades necessárias.
+- Criar um roadmap de estudos personalizado.
+- Sugerir projetos para portfólio.
+- Preparar o usuário para entrevistas.
+- Recomendar trilhas de aprendizagem da DIO.
 
 ### Resultado
 
-Foi gerado um cronograma de estudos de 90 dias contendo recomendações de aprendizado alinhadas ao meu objetivo profissional.
+O agente gerou um plano completo contendo:
+
+- Visão da profissão.
+- Mapa de skills.
+- Roadmap de 90 dias.
+- Projeto de portfólio.
+- Simulação de entrevistas.
+- Trilha recomendada na plataforma DIO.
+
+---
+
+## 🔗 Conceito de Handoff
+
+Um dos principais conceitos demonstrados neste desafio foi o **handoff entre agentes**.
+
+O Agente 1 foi responsável por coletar e analisar informações.
+
+Após a escolha da carreira, essas informações foram transferidas para o Agente 2.
+
+O segundo agente utilizou o contexto recebido para criar um plano totalmente personalizado.
+
+Esse processo simula arquiteturas modernas de sistemas multiagentes utilizadas em aplicações reais de Inteligência Artificial.
 
 ---
 
@@ -60,25 +116,41 @@ Foi gerado um cronograma de estudos de 90 dias contendo recomendações de apren
 Usuário
    ↓
 Agente 1
-(Análise de Perfil)
+(Entrevista com 7 perguntas)
    ↓
-Sugestão de Profissões
+Análise de Perfil
    ↓
-Escolha da Profissão
+Ranking de 3 Carreiras
+   ↓
+Escolha da Carreira
+   ↓
+Handoff de Contexto
    ↓
 Agente 2
-(Plano de Estudos)
+(Planejador de Carreira)
    ↓
-Cronograma de 90 Dias
+Visão da Profissão
+   ↓
+Mapa de Skills
+   ↓
+Roadmap de 90 Dias
+   ↓
+Projeto de Portfólio
+   ↓
+Preparação para Entrevistas
+   ↓
+Trilha DIO Recomendada
 ```
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias e Conceitos Utilizados
 
 - Inteligência Artificial Generativa
 - Engenharia de Prompt
-- Simulação de Sistemas Multiagentes
+- Sistemas Multiagentes
+- Handoff entre Agentes
+- Planejamento de Carreira Assistido por IA
 - GitHub
 
 ---
@@ -88,15 +160,19 @@ Cronograma de 90 Dias
 Durante o desenvolvimento deste desafio foi possível compreender:
 
 - Como agentes de IA podem colaborar entre si.
-- A importância da engenharia de prompts.
-- Como estruturar fluxos de tomada de decisão utilizando IA.
-- Como transformar informações de entrada em planos de ação personalizados.
-- O potencial dos sistemas multiagentes para aplicações reais em educação e desenvolvimento profissional.
+- A importância da separação de responsabilidades entre agentes.
+- Como realizar transferência de contexto entre agentes.
+- A importância da Engenharia de Prompt para obtenção de resultados consistentes.
+- Como estruturar fluxos de decisão utilizando IA.
+- Como personalizar recomendações com base em dados coletados.
+- Aplicações práticas de sistemas multiagentes no mercado.
 
 ---
 
 ## 🏆 Conclusão
 
-Este desafio demonstrou na prática como agentes de IA podem trabalhar em conjunto para analisar perfis, gerar recomendações e criar planos personalizados de desenvolvimento.
+Este desafio permitiu explorar conceitos fundamentais de Inteligência Artificial Generativa através da simulação de um sistema multiagente.
 
-A experiência permitiu explorar conceitos fundamentais de IA Generativa, Engenharia de Prompt e Sistemas Multiagentes, áreas que possuem grande potencial de aplicação no mercado atual.
+A colaboração entre os dois agentes demonstrou como é possível criar fluxos inteligentes de coleta, análise e utilização de informações para gerar recomendações altamente personalizadas.
+
+Além disso, o projeto evidenciou a importância do conceito de handoff e o potencial dos sistemas multiagentes para aplicações reais em orientação profissional, educação e desenvolvimento de carreira.
